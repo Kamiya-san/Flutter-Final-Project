@@ -15,19 +15,31 @@ class _CustomButtonState extends State<CustomButton> {
   Widget build(BuildContext context) {
     // final width = MediaQuery.of(context).size.width;
 
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) =>  FilePage1()));
-      },
-      style: ElevatedButton.styleFrom(
-        minimumSize: const Size.fromHeight(54),
-        backgroundColor: const Color(0xFFF5A7A5),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
+    return Container(
+      decoration: const BoxDecoration(
+        boxShadow: [
+            BoxShadow(
+              color: Colors.grey,
+              spreadRadius: 1,
+              blurRadius: 10,
+              offset: Offset(3, 3),
+            ),
+        ]
       ),
-      child: Text(
-        widget.text,
-        style: const TextStyle(color: Colors.black),
+      child: ElevatedButton(
+        onPressed: () {
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) =>  FilePage1()));
+        },
+        style: ElevatedButton.styleFrom(
+          minimumSize: const Size.fromHeight(54),
+          backgroundColor: const Color(0xFFF5A7A5),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
+        ),
+        child: Text(
+          widget.text,
+          style: const TextStyle(color: Colors.black),
+        ),
       ),
     );
   }

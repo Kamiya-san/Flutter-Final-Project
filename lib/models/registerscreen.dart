@@ -73,7 +73,6 @@ class _RegisterPageState extends State<RegisterPage> {
 
     return Scaffold(
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
             width: 500,
@@ -151,13 +150,11 @@ class _RegisterPageState extends State<RegisterPage> {
                     icon: Icons.email),
                 const SizedBox(height: 25),
                 // Button to send OTP
-                Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 100),
-                  child: customBtn('Next', () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const GoogleMapsPage()));
-                  })),
+               CustomButton(text: 'Next', onPressed: (){
+               Navigator.of(context).push(MaterialPageRoute(builder: (context) => GoogleMapsPage()));
+               }),
                 const SizedBox(height: 20),
-                const OrDivider(),
+                OrDivider(),
                 const SizedBox(height: 10),
                 InkWell(
                     child: buildSocialButton(

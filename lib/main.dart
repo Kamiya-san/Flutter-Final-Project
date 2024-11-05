@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         colorSchemeSeed: Color(0xffFFC1CC),
         useMaterial3: true,
       ),
-      home: const GoogleMapsPage(),
+      home: const LoginPage(),
     );
   }
 }

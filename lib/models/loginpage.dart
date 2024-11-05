@@ -40,7 +40,6 @@ class _LoginPageState extends State<LoginPage> {
     TextEditingController passwordController1 = TextEditingController();
     return Scaffold(
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
             width: 500,
